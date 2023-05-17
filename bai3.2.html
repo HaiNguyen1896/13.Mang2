@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>tic tac toe</title>
+</head>
+<body>
+<p id="ketqua"></p>
+</body>
+</html>
+<script>
+  let kq = document.getElementById("ketqua");
+  let arrTable=[];
+  let data ="";
+  let count=0;
+  for (let i =0;i<5;i++){
+    arrTable[i]=["(.)","(.)","(.)","(.)","(.)"]
+    }
+  for (let i = 0 ; i<5;i++){
+    for (let j = 0;j<5;j++){
+      data += arrTable[i][j]+"&nbsp;&nbsp;";
+    }
+    data += "<br>"
+  }
+  data += `<br><button onclick='changeValue()'>Change Value</button>`
+  kq.innerHTML=data;
+
+
+  function changeValue() {
+    data = "";
+    if (count % 2 == 0) {
+      let x1 = parseInt(prompt("Nhập hàng muốn đánh x"));
+      let y1 = parseInt(prompt("Nhập cột muốn đánh x"));
+      arrTable[x1][y1] = "x";
+    }else {
+      let x1 = parseInt(prompt("Nhập hàng muốn đánh o"));
+      let y1 = parseInt(prompt("Nhập cột muốn đánh o"));
+      arrTable[x1][y1] = "o";
+    }
+    count++;
+    for (let i = 0; i < 5; i++) {
+      for (let j = 0; j < 5; j++) {
+        data += arrTable[i][j] + "&nbsp;&nbsp;";
+      }
+      data += "<br>"
+    }
+    data += `<br><button onclick='changeValue()'>Change Value</button>`;
+    kq.innerHTML = data;
+    checkketqua();
+  }
+  function checkketqua() {
+    for (i = 0; i < 5; i++) {
+      for (j = 0; j < 5; j++) {
+        if (arrTable[i][j] == "x" && arrTable[i][j + 1] == 'x' && arrTable[i][j + 2] == "x") {
+          alert("Phe thắng là phe có hình x");
+          break;
+        }else if (arrTable[i][j] == "o" && arrTable[i][j + 1] == 'o' && arrTable[i][j + 2] == "o") {
+          alert("Phe thắng là phe có hình o");
+          break;
+        }
+      }
+    }
+  }
+</script>
