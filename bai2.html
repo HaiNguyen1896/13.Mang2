@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<p>TỪ TIẾNG ANH</p>
+<input type="text" id="input" style="height: 20px;position: absolute; top: 13px;left: 130px" placeholder="Tiếng Anh - Tiếng Việt">
+<button style="position: absolute; top: 16px ;left: 330px" onclick="transfer()">Tìm</button>
+<p id="ketqua"></p>
+</body>
+</html>
+
+<script>
+  function transfer(){
+    let data=document.getElementById("input");
+    let inputWord = ["apple","table","chair","bed","hair","clothes"];
+    let outputWord= ["Quả táo","Cái bàn","Cái ghế","Cái giường","Tóc","Quần áo"];
+    for (let i=0;i<inputWord.length;i++){
+      if((data).value == inputWord[i]){
+        document.getElementById("ketqua").innerHTML=`Nghĩa của từ ${inputWord[i]} là ${outputWord[i]}`;
+        break;
+      }else{
+        document.getElementById("ketqua").innerHTML=`Từ này hiện chưa có trong từ điển, mong bạn thông cảm`;
+      }
+    }
+  }
+</script>
