@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 3- Viết chương trình khởi tạo mảng số nguyên.
+    //Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+    let myArr = [];
+    let average = 0;
+    for (let i = 0; i < 10; i++) {
+        myArr[i] = Math.floor(Math.random() * 100);
+    }
+    let max = myArr[0];
+    for (let i = 0; i < myArr.length; i++) {
+        average += myArr[i];
+        if (max < myArr[i]) {
+            max = myArr[i];
+        }
+    }
+    average = average / myArr.length;
+    document.write(`Mảng ban đầu là: ${myArr} <br>`)
+    document.write(`Giá trị max trong mảng là ${max} và giá trị trung bình các phần tử trong mảng = ${average}`);
+</script>

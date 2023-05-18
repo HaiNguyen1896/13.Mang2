@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 4- Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+    let myArr = [];
+    let number = parseInt(prompt("Nhập số lượng phần tử cho mảng"));
+    let temp;
+    let first = 0;
+    let last = number - 1;
+    for (let i=0;i<number;i++){
+        myArr[i]=parseInt(prompt(`Nhập giá trị myArr[${i}]`))
+    }
+    document.write(`Mảng ban đầu trước khi đảo ngược mảng là ${myArr} <br>`);
+    while (first < last) {
+        temp = myArr[first];
+        myArr[first] = myArr[last];
+        myArr[last] = temp;
+        first++;
+        last--;
+    }
+    document.write(`Sau khi đảo ngược giá trị của mảng là ${myArr}`);
+</script>

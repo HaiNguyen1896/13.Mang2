@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 8- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử.
+    //Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+    let myArr = [];
+    let temp;
+    for (let i = 0; i < 10; i++) {
+        myArr[i] = parseInt(prompt(`Nhập giá trị myArr[${i}]`))
+    }
+    document.write(`Giá trị của mảng trước khi sắp xếp ${myArr} <br>`);
+    for (let i = 0; i < myArr.length; i++) {
+        for (let j = i + 1; j < myArr.length; j++) {
+            if (myArr[i] < myArr[j]) {
+                temp = myArr[j];
+                myArr[j] = myArr[i];
+                myArr[i] = temp;
+            }
+        }
+    }
+    document.write(`Giá trị của mảng sau khi sắp xếp ${myArr}`);
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 5- Viết chương trình đếm số nguyên âm trong một chuỗi
+    let myArr = [];
+    let number = parseInt(prompt("Nhập số lượng phần tử cho mảng"));
+    let count = 0;
+    for (let i = 0; i < number; i++) {
+        myArr[i] = parseInt(prompt(`Nhập giá trị myArr[${i}]`))
+    }
+    for (let i = 0; i < number; i++) {
+        if (myArr[i] < 0) {
+            count++;
+        }
+    }
+    document.write(`Giá trị của mảng là ${myArr} <br>`);
+    document.write(`Số lượng số nguyên âm trong chuỗi bằng ${count}`)
+
+</script>

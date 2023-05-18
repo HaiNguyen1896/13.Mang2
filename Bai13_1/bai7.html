@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 7- Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+    //Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+    let myArr = [];
+    for (let i = 0; i < 10; i++) {
+        myArr[i] = parseInt(prompt(`Nhập giá trị myArr[${i}]`))
+    }
+    document.write(`Giá trị của mảng trước khi kiểm tra ${myArr} <br>`);
+    let intV = parseInt(prompt("Nhập số nguyên V cần kiểm tra"));
+    let check=false;
+    for (let i = 0; i < 10; i++) {
+        if (myArr[i] === intV) {
+            check = true;
+            myArr.splice(i, 1);
+            break;
+        } else {
+            check = false;
+        }
+    }
+    if (check === true) {
+        document.write(`Sau khi loại bỏ số nguyên ${intV}, `);
+    } else {
+        document.write(`Giá trị ${intV} không nằm trong mảng `);
+    }
+    document.write(`Giá trị của mảng sau khi kiểm tra ${myArr}`);
+</script>
