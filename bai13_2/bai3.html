@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+</script>
+<script>
+
+    let chart;
+    let strArr = [];
+    let count = 0;
+    chart = prompt("Nhập phần tử của mảng ký tự");
+    for (let i = 0; i < chart.length; i++) {
+        strArr.push(chart[i]);
+    }
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] == '0' || strArr[i] == '1' || strArr[i] == '2' || strArr[i] == '3' || strArr[i] == '4' || strArr[i] == '5' || strArr[i] == '6' || strArr[i] == '7' || strArr[i] == '8' || strArr[i] == '9') {
+            count++;
+        }
+    }
+    document.write(`Mảng kí tự vừa nhập là ${strArr}, số ký tự số trong mảng là ${count}`);
+</script>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 6: Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+    let chart;
+    let strArr = [];
+    chart = prompt("Nhập phần tử của mảng ký tự");
+    for (let i = 0; i < chart.length; i++) {
+        strArr.push(chart[i]);
+    }
+    document.write(`Mảng kí tự trước khi thay thế là ${strArr} <br>`);
+    for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] === '-') {
+            strArr[i] = "_";
+        }
+    }
+    document.write(`Mảng kí tự sau khi thay thế là ${strArr}`);
+
+</script>

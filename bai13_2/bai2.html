@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //Bài 2: Viết một chương trình để in các ký tự trong một mảng theo thứ tự đảo ngược.
+    //Ví dụ, nếu một mảng chứa các ký tự  [ 'c', 's', 'c', '2', '6', '1' ] sau khi thực hiện đảo ngược sẽ là "162csc"
+    let arr = [];
+    let nArr = parseInt(prompt("Nhập số lượng phần tử trong mảng"));
+    for (let i = 0; i < nArr; i++) {
+        arr[i] = prompt(`Nhập giá trị nArr[${i}]`);
+    }
+    document.write(`Mảng arr trước khi chuyển: ${arr} <br>`)
+    let nStart = 0;
+    let nLast = nArr - 1;
+    let temp;
+    while (nStart < nLast) {
+        temp = arr[nStart];
+        arr[nStart] = arr[nLast];
+        arr[nLast] = temp;
+        nStart++;
+        nLast--;
+    }
+    arr = arr.join("");
+    document.write(`Mảng arr sau khi chuyển: ${arr}`)
+</script>

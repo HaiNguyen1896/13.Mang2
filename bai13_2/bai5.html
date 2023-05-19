@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+</script>
+<script>
+    let str1;
+    str1 = prompt("Nhập chuỗi 1");
+    let str2;
+    str2 = prompt("Nhập chuỗi 2");
+    let check;
+    if(str1.length===str2.length){
+        check=true;
+    }else{
+        check=false;
+    }
+    if (check===true){
+        for (let i = 0; i < str1.length; i++) {
+            if(str1[i]===str2[i]){
+                check = true;
+            }else{
+                check = false;
+                alert(`2 chuỗi không giống nhau`);
+                break;
+            }
+        }
+    }
+    if (check===true){
+        alert(`2 chuỗi giống nhau`);
+    }else{
+        alert((`2 chuỗi không giống nhau`));
+    }
+</script>
